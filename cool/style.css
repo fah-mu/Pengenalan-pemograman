@@ -1,0 +1,347 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    font-family: "roboto", sans-serif;
+ }
+
+ h1,h2,h3,h4,h5,h6, strong {
+    color: black
+ }
+
+ p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+ }
+
+ p, span, label, input, textarea, li {
+    color: gray
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ .main-countener{
+    width: 1200px;
+    margin: 0 auto;
+ }
+
+ @media screen  { 
+    .main-countener {
+        max-width: 1200px;
+        width: 90%;
+    }
+ }
+
+/*button*/
+.btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 5px
+}
+
+/* Titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: black;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Layout  */
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+ /* Logo and navigation menu */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo a {
+    color: green
+}
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: black;
+}
+
+/* Burger */ 
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 10px;
+    z-index: 99;
+}
+
+.burger{
+     display: none; 
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* hero section */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-right img {
+    width: 90%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* services section */
+#services {
+    padding: 6rem 0;
+}
+
+#services .pre-title {
+    margin: 0 auto;
+}
+
+.Services-title {
+    text-align: center;
+}
+
+.services {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color:aliceblue;
+    border-radius: 0.7rem;
+}
+
+.services h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.services-icon {
+    background: silver;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.services-icon svg {
+    fill: aqua;
+}
+
+/* Portfolio section */
+#portfolios {
+    padding: 6rem 0;
+}
+
+.portfolio {
+    border-radius: 0.7rem;
+    overflow: hidden;
+    border: 1px solid aliceblue;
+}
+
+.portfolio-cover {
+    height: 250px;
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 1rem;
+}
+
+.portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover {
+    fill: blueviolet;
+}
+
+.portfolio-title a svg {
+    transition: .2s ease-in-out;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portfolio-tags div {
+    font-size: .9rem;
+    border: 1px solid aliceblue;
+    padding: .4rem 1rem;
+    color: blueviolet;
+}
+
+/* skill & education */
+#skills{
+    padding: 6rem 0;
+    background: aliceblue;
+}
+
+.skill-grip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education {
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line {
+    padding: 0 .7rem;
+}
+
+.education .line div{
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.education-info p {
+    margin: .6rem 0 1.4rem;
+}
+
+.education-year {
+    margin-bottom: 3rem;
+}
+
+/* The dot on the line */
+.education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skill-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skill-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* Contact section */
+#contact {
+    padding: 6rem 0;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background: aliceblue;
+    border: 1px solid;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: black;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid green;
+}
